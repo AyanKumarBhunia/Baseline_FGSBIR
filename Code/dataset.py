@@ -18,8 +18,8 @@ class FGSBIR_Dataset(data.Dataset):
 
         self.hp = hp
         self.mode = mode
-        coordinate_path = os.path.join(hp.root_dir, hp.dataset_name , hp.dataset_name + '_Coordinate')
-        self.root_dir = os.path.join(hp.root_dir, hp.dataset_name)
+        coordinate_path = os.path.join(hp.root_dir, 'Dataset', hp.dataset_name , hp.dataset_name + '_Coordinate')
+        self.root_dir = os.path.join(hp.root_dir, 'Dataset', hp.dataset_name)
         with open(coordinate_path, 'rb') as fp:
             self.Coordinate = pickle.load(fp)
 
